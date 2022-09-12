@@ -45,7 +45,7 @@ public class Building {
         ArrayList<Integer> indexesToDelete = new ArrayList<>();
         for (int i = 0; i < passengersInFloor[elevator.getCurrentFloor() - 1].size() && !elevator.isFull(); i++) {
             if (elevator.isDirection()) {
-                if (passengersInFloor[elevator.getCurrentFloor() - 1].get(i) > elevator.getCurrentFloor()) {//DRY :(
+                if (passengersInFloor[elevator.getCurrentFloor() - 1].get(i) > elevator.getCurrentFloor()) {
                     indexesToDelete.add(i);
                     elevator.addPassenger(passengersInFloor[elevator.getCurrentFloor() - 1].get(i));
                 }
